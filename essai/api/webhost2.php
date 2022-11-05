@@ -35,14 +35,14 @@ $data8=array(
 //$fichier = fopen('sortot.txt', 'w');
             //fwrite($fichier, 'Un premier texte dans mon fichier'); 
  
- file_put_contents('entree.txt', $data);
-file_put_contents('entot.txt', $data2);
- file_put_contents('sortie.txt', $data4);
- file_put_contents('sortot.txt', $data5);
+ file_put_contents('entree2.txt', $data);
+file_put_contents('entot2.txt', $data2);
+ file_put_contents('sortie2.txt', $data4);
+ file_put_contents('sortot2.txt', $data5);
  //$fichier = fopen('essai/api/sortot.txt', 'c+b');
             //fwrite($fichier, $data5);
- file_put_contents('entit.txt', $data6);
- file_put_contents('sortit.txt', $data7);
- file_put_contents('gbmode.txt', $data8);
+ file_put_contents('entit2.txt', $data6);
+ file_put_contents('sortit2.txt', $data7);
+ file_put_contents('gbmode2.txt', $data8);
 }
 ?>
