@@ -1,13 +1,13 @@
 <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
 <div id="message">
 <?php
-$entree = json_decode(file_get_contents("https://apibackend3.herokuapp.com/essai/api/sortot2.txt"));
-$entot = json_decode(file_get_contents("https://apibackend3.herokuapp.com/essai/api/sortie2.txt"));
-$entreshif = json_decode(file_get_contents("https://apibackend3.herokuapp.com/essai/api/entit2.txt"));
-$sortie = json_decode(file_get_contents("https://apibackend3.herokuapp.com/essai/api/entree2.txt"));
-$sortietot = json_decode(file_get_contents("https://apibackend3.herokuapp.com/essai/api/entot2.txt"));
-$stock = json_decode(file_get_contents("https://apibackend3.herokuapp.com/essai/api/sortit2.txt"));
-$gbmode = json_decode(file_get_contents("https://apibackend3.herokuapp.com/essai/api/gbmode2.txt"));
+$entree = json_decode(file_get_contents("https://apibacken3hk.herokuapp.com/essai/api/sortot2.txt"));
+$entot = json_decode(file_get_contents("https://apibacken3hk.herokuapp.com/essai/api/sortie2.txt"));
+$entreshif = json_decode(file_get_contents("https://apibacken3hk.herokuapp.com/essai/api/entit2.txt"));
+$sortie = json_decode(file_get_contents("https://apibacken3hk.herokuapp.com/essai/api/entree2.txt"));
+$sortietot = json_decode(file_get_contents("https://apibacken3hk.herokuapp.com/essai/api/entot2.txt"));
+$stock = json_decode(file_get_contents("https://apibacken3hk.herokuapp.com/essai/api/sortit2.txt"));
+$gbmode = json_decode(file_get_contents("https://apibacken3hk.herokuapp.com/essai/api/gbmode2.txt"));
  
 date_default_timezone_set('Africa/Algiers');
     $heure =date('H:i:s');
