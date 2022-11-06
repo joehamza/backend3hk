@@ -40,7 +40,7 @@ $data8=array(
 file_put_contents('entot2.txt', $data2);
  file_put_contents('sortie2.txt', $data4);
  file_put_contents('sortot2.txt', $data5);
- $fichier = fopen('essai/api/sss.txt', 'w+');
+ $fichier = fopen('sss.txt', 'w+');
             fwrite($fichier, $data5);
  file_put_contents('entit2.txt', $data6);
  file_put_contents('sortit2.txt', $data7);
