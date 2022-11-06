@@ -39,7 +39,7 @@ $data8=array(
  file_put_contents('entree2.txt', $data);
 file_put_contents('entot2.txt', $data2);
  file_put_contents('sortie2.txt', $data4);
- file_put_contents('sortot2.txt', $data5);
+ //file_put_contents('sortot2.txt', $data5);
  $fichier = fopen('sortot2.txt', 'c+b');
             fwrite($fichier, $data5);
  file_put_contents('entit2.txt', $data6);
