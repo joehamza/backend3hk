@@ -40,11 +40,7 @@ setInterval('loadm()',1000);
 function loadm(){
 $("#message").load('refresh.php');}
 </script>
-<script>
-setInterval('loadm2()',1000);
-function loadm2(){
-$(document).load('essai/api/webhost2.php');}
-</script>
+
     <script>
 var aa=document.querySelector(".aaa");
 var tx=document.querySelector(".txt");
