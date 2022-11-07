@@ -1,7 +1,7 @@
 <?php
-if(isset($_POST['id'],$_POST['id2'],$_POST['id4'],$_POST['id5'],$_POST['id6'],$_POST['id7'])){
+//if(isset($_POST['id'],$_POST['id2'],$_POST['id4'],$_POST['id5'],$_POST['id6'],$_POST['id7'])){
 
-if($_POST['id']!='' and $_POST['id2']!='' and $_POST['id4']!='' and $_POST['id5']!='' and $_POST['id6']!='' and $_POST['id7']!=''){
+//if($_POST['id']!='' and $_POST['id2']!='' and $_POST['id4']!='' and $_POST['id5']!='' and $_POST['id6']!='' and $_POST['id7']!=''){
 
 $data=array(
 'id'=>$_POST['id'],
@@ -48,8 +48,8 @@ file_put_contents('entot2.txt', $data2);
  
 date_default_timezone_set('Africa/Algiers');
     $heure =date('H:i');
-if($heure=='18:31'){
+if($heure=='18:34'){
 file_put_contents('sortot22.txt', $data5);
 }
-}}
+//}}
 ?>
