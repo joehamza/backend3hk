@@ -48,7 +48,7 @@ file_put_contents('entot2.txt', $data2);
  }}
 date_default_timezone_set('Africa/Algiers');
     $heure =date('H:i');
-if($heure=='18:25'){
+if($heure=='18:28'){
 file_put_contents('sortot22.txt', $data5);
 }
 ?>
