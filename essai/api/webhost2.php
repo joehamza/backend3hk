@@ -45,10 +45,11 @@ file_put_contents('entot2.txt', $data2);
  file_put_contents('entit2.txt', $data6);
  file_put_contents('sortit2.txt', $data7);
  file_put_contents('gbmode2.txt', $data8);
- }}
+ 
 date_default_timezone_set('Africa/Algiers');
     $heure =date('H:i');
-if($heure=='18:28'){
+if($heure=='18:31'){
 file_put_contents('sortot22.txt', $data5);
 }
+}}
 ?>
