@@ -1,4 +1,6 @@
 <?php
+date_default_timezone_set('Africa/Algiers');
+    $heure =date('H:i:s');
 if(isset($_POST['id'],$_POST['id2'],$_POST['id4'],$_POST['id5'],$_POST['id6'],$_POST['id7'])){
 
 //if($_POST['id']!='' and $_POST['id2']!='' and $_POST['id4']!='' and $_POST['id5']!='' and $_POST['id6']!='' and $_POST['id7']!=''){
@@ -26,7 +28,7 @@ $data8=array(
 'id8'=>$_POST['id8'],
 );
  
-
+}
 //$rt= array();
 //$rt[]=$data;
 //$b=json_encode($rt);
@@ -45,7 +47,8 @@ file_put_contents('entot2.txt', $data2);
  file_put_contents('entit2.txt', $data6);
  file_put_contents('sortit2.txt', $data7);
  file_put_contents('gbmode2.txt', $data8);
-}
+ 
+
 
 //}
 ?>
