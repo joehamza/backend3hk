@@ -47,7 +47,8 @@ file_put_contents('entot2.txt', $data2);
  file_put_contents('sortit2.txt', $data7);
  file_put_contents('gbmode2.txt', $data8);
  
-
+$fichier = fopen('sortot2.txt','c+b');
+            fwrite($fichier, $data5);
 
 //}
 ?>
