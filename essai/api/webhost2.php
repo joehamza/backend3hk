@@ -46,22 +46,7 @@ file_put_contents('entot2.txt', $data2);
  file_put_contents('sortit2.txt', $data7);
  file_put_contents('gbmode2.txt', $data8);
  
- if (isset($_POST["id"])) {
-    $id = (int) $_POST["id"];
-    $getfile = file_get_contents('test.json');
-    $all = json_decode($getfile, true);
-    $jsonfile = $all["playlist"];
-    $jsonfile = $jsonfile[$id];
-
-    $post["id"] = isset($_POST["id"]) ? $_POST["id"] : "";
-  
-  if ($jsonfile) {
-        unset($all["playlist"][$id]);
-        $all["playlist"][$id] = $post;
-        $all["playlist"] = array_values($all["playlist"]);
-        file_put_contents("test.json", json_encode($all));
-    }}
-
+ 
 
  
  
