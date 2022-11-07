@@ -57,6 +57,7 @@ ob_start();
         <?php endforeach; ?>
 </table>
   <br><br>
+	<hr>
 	<?php } ?>
 	<?php foreach ($sortietot as $sortot) : ?>
 	<?php endforeach; ?>
@@ -111,6 +112,7 @@ ob_start();
 
         </table>
     <br><br>
+	<hr>
 	<?php } ?>
 	<?php foreach ($stock as $st) : ?>
 	<?php endforeach; ?>
