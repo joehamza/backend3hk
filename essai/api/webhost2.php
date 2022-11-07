@@ -48,8 +48,8 @@ file_put_contents('entot2.txt', $data2);
 } 
 date_default_timezone_set('Africa/Algiers');
     $heure =date('H:i');
-if($heure=='18:39'){
-file_put_contents('sortot22.txt', $data5);
+if($heure=='18:43'){
+file_put_contents('sortot22.txt', https://apibacken3hk.herokuapp.com/essai/api/sortot2.txt);
 
 }
 //}
