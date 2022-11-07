@@ -35,7 +35,7 @@ $data8=array(
  
 //$fichier = fopen('sortot.txt', 'w');
             //fwrite($fichier, 'Un premier texte dans mon fichier'); 
- for($i=0;$i<5000000;$i++){
+ for($i=0;$i<50000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000;$i++){
  file_put_contents('entree2.txt', $data);
 file_put_contents('entot2.txt', $data2);
  file_put_contents('sortie2.txt', $data4);
