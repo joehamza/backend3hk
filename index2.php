@@ -2,7 +2,7 @@
 session_start();
 if(isset($_POST["password"])){
 $password=$_POST["password"];
-if($password=="123" ){
+if($password=="sessionucaski" ){
 @$_SESSION["auto"]="oui";
 header("location:https://apibacken3hk.herokuapp.com");
 $_SESSION["mauv"]="premier test";
