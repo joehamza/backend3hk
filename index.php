@@ -1,3 +1,10 @@
+<?php
+session_start();
+if($_SESSION["auto"]!="oui"){
+header("location:index2.php");
+exit();	
+}
+?>
 <title>Complex silo hk</title>
 <link rel="icon" href="ecran 3D.ico" >
 <style>
