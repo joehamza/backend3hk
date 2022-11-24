@@ -4,7 +4,7 @@ if(isset($_POST["password"])){
 $password=$_POST["password"];
 if($password=="123" ){
 @$_SESSION["auto"]="oui";
-header("location:page1.php");
+header("location:index.php");
 $_SESSION["mauv"]="premier test";
 }
 else{echo"<div style='position:absolute;top:53%;left:50%;color:red;font-size:25px;'>Mot de passe incorrect</div>";}
