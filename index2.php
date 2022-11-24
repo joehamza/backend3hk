@@ -4,7 +4,7 @@ if(isset($_POST["password"])){
 $password=$_POST["password"];
 if($password=="123" ){
 @$_SESSION["auto"]="oui";
-header("location:index.php");
+header("location:https://apibacken3hk.herokuapp.com");
 $_SESSION["mauv"]="premier test";
 }
 else{echo"<div style='position:absolute;top:53%;left:50%;color:red;font-size:25px;'>Mot de passe incorrect</div>";}
@@ -43,7 +43,7 @@ else{echo"<div style='position:absolute;top:53%;left:50%;color:red;font-size:25p
             margin-left: 12px; 
             background: none; 
             background-color: lightyellow; 
-			font-size:20px;
+			font-size:30px;
         } 
   
         
@@ -61,7 +61,7 @@ else{echo"<div style='position:absolute;top:53%;left:50%;color:red;font-size:25p
         #form_body { 
             border-radius: 12px; 
             height: 340px; 
-            width: 550px; 
+            width: 590px; 
             background-color: beige; 
             border: 1px solid pink; 
             margin: auto; 
@@ -96,7 +96,7 @@ else{echo"<div style='position:absolute;top:53%;left:50%;color:red;font-size:25p
 				<br><br>
                     <input id="name" type="password" Placeholder="Mot de passe" name="password" required autofocus></center>
                 </div> 
-                  <br>
+                  
                 <div class="id input"> 
                     <input id="submit" type="submit" name="submit" value="Valider" />
                    
