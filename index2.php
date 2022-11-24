@@ -4,7 +4,7 @@ if(isset($_POST["password"])){
 $password=$_POST["password"];
 if($password=="123" ){
 @$_SESSION["auto"]="oui";
-header("location:index.php");
+header("location:https://apibacken3hk.herokuapp.com");
 $_SESSION["mauv"]="premier test";
 }
 else{echo"Mauvais mot de passe";}
