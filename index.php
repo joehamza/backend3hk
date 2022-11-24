@@ -35,7 +35,7 @@ transform:translateX(1000px);}
 transition:transform 0.5s 1.5s;
 transform:translateX(0);
 }
-	a{text-decoration:none;color:green;font-size:30px;position:absolute;top:30%;}
+	a{text-decoration:none;color:green;font-size:30px;position:absolute;top:10%;}
 </style>
 <a href="deconn.php">Déconnexion</a>
 <div class="h">
