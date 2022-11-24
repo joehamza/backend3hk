@@ -1,3 +1,10 @@
+<?php
+session_start();
+if($_SESSION["auto"]!="oui"){
+header("location:index2.php");
+exit();	
+}
+?>
 <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
 <div id="message">
 <?php
