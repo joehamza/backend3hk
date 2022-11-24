@@ -36,6 +36,7 @@ transition:transform 0.5s 1.5s;
 transform:translateX(0);
 }
 </style>
+<a href="deconn.php">Déconnexion</a>
 <div class="h">
 <div class="aaa"><em class="txt">UCA DE SKIKDA</em></div></div></div>
 <img src="11.jpg"  style="width: 60px; height: 85px; position:absolute; left:100px;top:17px;" />
