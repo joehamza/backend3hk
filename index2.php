@@ -7,7 +7,7 @@ if($password=="123" ){
 header("location:https://apibacken3hk.herokuapp.com");
 $_SESSION["mauv"]="premier test";
 }
-else{echo"<div style='position:absolute;top:53%;left:50%;color:red;font-size:25px;'>Mot de passe incorrect</div>";}
+else{echo"<div style='color:red;font-size:40px;'>Mot de passe incorrect</div>";}
 }
 ?>
 <html> 
