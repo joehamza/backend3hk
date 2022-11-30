@@ -8,17 +8,16 @@ exit();
 <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
 <div id="message">
 <?php
-$entree = json_decode(file_get_contents("essai/api/sortot2.txt"));
-$entot = json_decode(file_get_contents("essai/api/sortie2.txt"));
-$entreshif = json_decode(file_get_contents("essai/api/entit2.txt"));
-$sortie = json_decode(file_get_contents("essai/api/entree2.txt"));
-$sortietot = json_decode(file_get_contents("https://apibacken3hk.herokuapp.com/essai/api/entot2.txt"));
-$stock = json_decode(file_get_contents("https://apibacken3hk.herokuapp.com/essai/api/sortit2.txt"));
-$gbmode = json_decode(file_get_contents("https://apibacken3hk.herokuapp.com/essai/api/gbmode2.txt"));
+$entree = json_decode(file_get_contents("essai/api/sortot.txt"));
+$entot = json_decode(file_get_contents("essai/api/sortie.txt"));
+$entreshif = json_decode(file_get_contents("essai/api/entit.txt"));
+$sortie = json_decode(file_get_contents("essai/api/entree.txt"));
+$sortietot = json_decode(file_get_contents("essai/api/entot.txt"));
+$stock = json_decode(file_get_contents("essai/api/sortit.txt"));
+$gbmode = json_decode(file_get_contents("essai/api/gbmode.txt"));
  
 date_default_timezone_set('Africa/Algiers');
     $heure =date('H:i:s');
-ob_start();
 ?>
 <center>
 	<br><br>
@@ -29,16 +28,16 @@ ob_start();
     <table border="1"  style="border-collapse:collapse;font-size:25px">
     <?php foreach ($entot as $et) : ?>
      
-    <tr><td colspan="6" align="center"><div style="font-size:30px;background-color:#333;color:#eee;">*Les entrées le <?=$et->Date ?> à <?=$heure?></div></td></tr>
+    <tr><td colspan="6" align="center"><div style="font-size:30px;background-color:#333;color:#eee;">*Les entrÃ©es le <?=$et->Date ?> ( <?=$heure?> )</div></td></tr>
     <?php endforeach; ?>
        
     <tr>
         <th>Navire</th>
         <th>NBR</th>
         <th>Fosse</th>
-        <th>Débarqué</th>
-        <th>T/Débarqué</th>
-        <th>R/à bord</th>
+        <th>DÃ©barquÃ©</th>
+        <th>T/DÃ©barquÃ©</th>
+        <th>R/Ã  bord</th>
         
     </tr>
     <?php foreach ($entree as $ent) : ?>    
@@ -53,18 +52,17 @@ ob_start();
        <?php foreach ($entot as $ent) : ?>
        <?php $qe4=number_format($ent->ooo4,2,',','');
         $fos4=number_format($ent->fos4,2,',','');?>
-        <tr><th>Total</th><th><?= $ent->c4?></th><th><?= $fos4 ?></th><th><?= $qe4 ?></th><th>/</th><th>/</th></tr>
+        <tr><th>Total gÃ©nÃ©ral</th><th><?= $ent->c4?></th><th><?= $fos4 ?></th><th><?= $qe4 ?></th><th>/</th><th>/</th></tr>
         <?php endforeach; ?>
         <?php foreach ($entreshif as $es) : ?>
-        <tr><th colspan="6" align="center"><div style="color:blue;"><em>Shift <?= $es->navire ?> / début : <?= $es->jour ?> <?= $es->shift ?> le <?= $es->date ?></div> <br><div style="color:green;">(<?= $es->produit ?>)</em></div></th></tr>
+        <tr><th colspan="6" align="center"><div style="color:blue;"><em>Shift <?= $es->navire ?> / dÃ©but : <?= $es->jour ?> <?= $es->shift ?> le <?= $es->date ?></div> <br><div style="color:green;"><?= $es->produit ?></em></div></th></tr>
         <tr><th colspan='2'>Matin</th><th colspan='2'>Soir</th><th colspan='2'>Nuit</th></tr>
-        <tr><th>Quantité</th><th>Camions</th><th>Quantité</th><th>Camions</th><th>Quantité</th><th>Camions</th></tr>
+        <tr><th>QuantitÃ©</th><th>Camions</th><th>QuantitÃ©</th><th>Camions</th><th>QuantitÃ©</th><th>Camions</th></tr>
 <tr><td align='center'><?= $es->qm ?></td><td align='center'><?= $es->nm ?></td><td align='center'><?= $es->qs ?></td><td align='center'><?= $es->ns ?></td><td align='center'><?= $es->qn ?></td><td align='center'><?= $es->nn ?></td></tr>
-        <tr><td colspan='6' align='center'>Nombre de séjour après le début de débarquement : <?= $es->apre ?><br>Nombre de jours de débarquement : <?= $es->njour ?><br>Nombre de jours neant : <?= $es->neant ?></td></tr>
+        <tr><td colspan='6' align='center'>Nombre de sÃ©jour aprÃ¨s le dÃ©but de dÃ©barquement : <?= $es->apre ?><br>Nombre de jours de dÃ©barquement : <?= $es->njour ?><br>Nombre de jours neant : <?= $es->neant ?></td></tr>
         <?php endforeach; ?>
 </table>
   <br><br>
-	<hr>
 	<?php } ?>
 	<?php foreach ($sortietot as $sortot) : ?>
 	<?php endforeach; ?>
@@ -72,14 +70,14 @@ ob_start();
 <table border="1"  style="border-collapse:collapse;font-size:25px">
     <?php foreach ($sortietot as $sortot) : ?>
 	
-    <tr><td colspan="7" align="center"><div style="font-size:30px;background-color:#333;color:#eee"">*Enlèvements du silo portuaire le <?=$sortot->Date ?> à <?=$heure?></div></td></tr>
+    <tr><td colspan="7" align="center"><div style="font-size:30px;background-color:#333;color:#eee"">*EnlÃ¨vements du silo portuaire le <?=$sortot->Date ?> ( <?=$heure?> )</div></td></tr>
     <?php endforeach; ?>
     <tr>
 	    <th>Organisme</th>
         <th>Camion</th>
-        <th>Quantité</th>
+        <th>QuantitÃ©</th>
         <th>Wagon</th>
-        <th>Quantité</th>
+        <th>QuantitÃ©</th>
         <th>Total</th>
 	    <th>Produit</th>
     </tr>
@@ -103,28 +101,28 @@ ob_start();
     $qf2=number_format($sortot->q2,2,',','');
     $wf2=number_format($sortot->wag2,2,',','');
     $tot2=number_format($sortot->ooo2,2,',','');?>
-    <th>Total</th><th><?= $sortot->c2 ?></th><th><?= $qf2 ?></th><th><?= $sortot->wa2 ?></th><th><?= $wf2 ?></th><th><?= $tot2 ?></th><th>/</th></tr>
+    <th>Total gÃ©nÃ©ral</th><th><?= $sortot->c2 ?></th><th><?= $qf2 ?></th><th><?= $sortot->wa2 ?></th><th><?= $wf2 ?></th><th><?= $tot2 ?></th><th>/</th></tr>
     <?php endforeach; ?>
     </table>
-    <table border="1" style="border-collapse:collapse;font-size:25px">
-        <tr><td colspan="5" align="center"><div style="font-size:30px;background-color:#333;color:#eee"">*Total par produit</div></td></tr>
-    <tr><th>Produit</th><th>Camion</th><th>Quantité</th><th>Wagon</th><th>Quantité</th></tr>
+    <table border="1" width="80%" style="border-collapse:collapse;font-size:25px">
+        <tr><td colspan="5" align="center"><div style="font-size:30px;background-color:#333;color:#eee"">*Total sortie par produit</div></td></tr>
+    <tr><th>Produit</th><th>Camion</th><th>QuantitÃ©</th><th>Wagon</th><th>QuantitÃ©</th><th>Total</th></tr>
     
     <?php foreach ($gbmode as $gbm) : ?>
   <?php  $gbcq2=number_format($gbm->gbcq,2,',','');
-     $gbwq2=number_format($gbm->gbwq,2,',','');?>
+     $gbwq2=number_format($gbm->gbwq,2,',','');
+	 $qqqt2=number_format($gbm->qqqt,2,',','');?>
     <div style="font-size:16px;">
-        <tr><td align="center"> <?= $gbm->mode ?></td><td align="center"><?= $gbm->gbc ?></td><td align="center"> <?= $gbcq2 ?></td><td align="center"><?= $gbm->gbw ?></td><td align="center"><?= $gbwq2 ?></td></tr>
+        <tr><td align="center"> <?= $gbm->mode ?></td><td align="center"><?= $gbm->gbc ?></td><td align="center"> <?= $gbcq2 ?></td><td align="center"><?= $gbm->gbw ?></td><td align="center"><?= $gbwq2 ?></td><td align="center"><?= $qqqt2 ?></td></tr>
         <?php endforeach; ?>
 
         </table>
     <br><br>
-	<hr>
 	<?php } ?>
 	<?php foreach ($stock as $st) : ?>
 	<?php endforeach; ?>
 	<?php if($st->stock!=''){ ?>
-    <table border="1" width="50%" style="border-collapse:collapse;font-size:25px">
+    <table border="1" width="60%" style="border-collapse:collapse;font-size:25px">
     <tr><td colspan="7" align="center"><div style="font-size:30px;background-color:#333;color:#eee"">*Stock comptable</div></td></tr>
     <tr>
         <th>Produit</th>
@@ -137,8 +135,9 @@ ob_start();
             <td align="center"><?= $st->stock ?></td>
     <?php endforeach; ?>
     </table>
-	    
+	    <br><br>
 	    <?php } ?>
 	   </div>
     </center>
 	    
+   
